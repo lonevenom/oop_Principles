@@ -1,6 +1,6 @@
 package abstraction.abstract_classes;
 
-public class Iphone extends Phone{
+public class Iphone extends Phone implements Camera, BlueTooth{
 
     public static final String OS = "IOS";
     public Iphone(){
@@ -30,4 +30,15 @@ public class Iphone extends Phone{
     public boolean isConvertible() {
         return true;
     }
+
+    @Override
+    public void takesPhoto() {
+        System.out.println("iPhone takes photo");
+    }
+
+    @Override
+    public void connectBlueTooth() {
+        System.out.println("iPhone connects BlueTooth");
+    }
+
 }

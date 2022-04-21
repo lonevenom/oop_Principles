@@ -1,8 +1,6 @@
 package abstraction.abstract_classes;
 
-import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
-
-public class Samsung extends Phone{
+public class Samsung extends Phone implements Camera, BlueTooth{
 
     public static final String OS = "Android";
     public Samsung() {
@@ -33,5 +31,13 @@ public class Samsung extends Phone{
         return true;
     }
 
+    @Override
+    public void takesPhoto() {
+        System.out.println("Samsung takes photo");
+    }
 
+    @Override
+    public void connectBlueTooth() {
+        System.out.println("Samsung connects BlueTooth");
+    }
 }
